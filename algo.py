@@ -6,10 +6,12 @@ from sklearn.cluster import KMeans
 
 # Load customer data
 customer_data = pd.read_csv('dataset.csv')
-print(customer_data.describe())
+print("Dataset Description\n",customer_data.describe())
 
+print("\n\n null values \n")
+print(customer_data.isnull().sum())
 # Selecting the columns for clustering
-X = customer_data.iloc[:, [1, 3]].values  # For example, columns 1 and 3
+X = customer_data.iloc[:, [1, 3]].values  # column 1=products purchased, column 3= money spent
 
 # KMeans clustering and WCSS (Within-Cluster Sum of Squares)
 wcss = []
