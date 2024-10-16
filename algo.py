@@ -40,11 +40,11 @@ plt.show()
 
 # Scatter plot with clusters
 plt.figure(figsize=(7, 5))  # Adjust the figure size if needed
-plt.scatter(X[Y == 0, 0], X[Y == 0, 1], s=20, c='green', label='Cluster 1')
-plt.scatter(X[Y == 1, 0], X[Y == 1, 1], s=20, c='red', label='Cluster 2')
-plt.scatter(X[Y == 2, 0], X[Y == 2, 1], s=20, c='orange', label='Cluster 3')
-plt.scatter(X[Y == 3, 0], X[Y == 3, 1], s=20, c='violet', label='Cluster 4')
-plt.scatter(X[Y == 4, 0], X[Y == 4, 1], s=20, c='blue', label='Cluster 5')
+plt.scatter(X[Y == 0, 0], X[Y == 0, 1], s=20, c='green', label='Moderate money,More Products')
+plt.scatter(X[Y == 1, 0], X[Y == 1, 1], s=20, c='red', label='Moderate Money, Less Products')
+plt.scatter(X[Y == 2, 0], X[Y == 2, 1], s=20, c='orange', label='High Money spent, Less Products')
+plt.scatter(X[Y == 3, 0], X[Y == 3, 1], s=20, c='violet', label='Less Money Spent, Less Products')
+plt.scatter(X[Y == 4, 0], X[Y == 4, 1], s=20, c='blue', label='Less Money spent,moderate-high products')
 
 # Plot centroids
 plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=50, c='black', label='Centroids')
